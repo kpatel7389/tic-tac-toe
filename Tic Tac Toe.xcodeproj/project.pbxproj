@@ -12,6 +12,9 @@
 		E3E39BB61F3E1E5D00B2E8AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E39BB41F3E1E5D00B2E8AB /* Main.storyboard */; };
 		E3E39BB81F3E1E5D00B2E8AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E39BB71F3E1E5D00B2E8AB /* Assets.xcassets */; };
 		E3E39BBB1F3E1E5D00B2E8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E39BB91F3E1E5D00B2E8AB /* LaunchScreen.storyboard */; };
+		E3E39BC51F3E23CF00B2E8AB /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E39BC21F3E23CF00B2E8AB /* board.png */; };
+		E3E39BC61F3E23CF00B2E8AB /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E39BC31F3E23CF00B2E8AB /* X.png */; };
+		E3E39BC71F3E23CF00B2E8AB /* O.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E39BC41F3E23CF00B2E8AB /* O.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E3E39BB71F3E1E5D00B2E8AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3E39BBA1F3E1E5D00B2E8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3E39BBC1F3E1E5D00B2E8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E39BC21F3E23CF00B2E8AB /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		E3E39BC31F3E23CF00B2E8AB /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
+		E3E39BC41F3E23CF00B2E8AB /* O.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = O.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				E3E39BB71F3E1E5D00B2E8AB /* Assets.xcassets */,
 				E3E39BB91F3E1E5D00B2E8AB /* LaunchScreen.storyboard */,
 				E3E39BBC1F3E1E5D00B2E8AB /* Info.plist */,
+				E3E39BC21F3E23CF00B2E8AB /* board.png */,
+				E3E39BC31F3E23CF00B2E8AB /* X.png */,
+				E3E39BC41F3E23CF00B2E8AB /* O.png */,
 			);
 			path = "Tic Tac Toe";
 			sourceTree = "<group>";
@@ -124,7 +133,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E39BC51F3E23CF00B2E8AB /* board.png in Resources */,
+				E3E39BC61F3E23CF00B2E8AB /* X.png in Resources */,
 				E3E39BBB1F3E1E5D00B2E8AB /* LaunchScreen.storyboard in Resources */,
+				E3E39BC71F3E23CF00B2E8AB /* O.png in Resources */,
 				E3E39BB81F3E1E5D00B2E8AB /* Assets.xcassets in Resources */,
 				E3E39BB61F3E1E5D00B2E8AB /* Main.storyboard in Resources */,
 			);
