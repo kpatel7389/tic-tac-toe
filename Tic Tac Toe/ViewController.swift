@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var activeGame = true
     
     
+    @IBOutlet weak var label: UILabel!
     
     @IBAction func action(_ sender: Any) {
         
@@ -44,21 +45,72 @@ class ViewController: UIViewController {
         }
         
         for pattern in winningPatterns {
+            
             if stateOfGame[pattern[0]] != 0 && stateOfGame[pattern[0]] == stateOfGame[pattern[1]] && stateOfGame[pattern[1]] == stateOfGame[pattern[2]] {
                 
                 activeGame = false; // stop the game if winner is present
                 
                 if stateOfGame[pattern[0]] == 1 {
-                    // X has won
-                    print("cross")
+                
+                    label.text = "X Won!"
+                    
                 } else {
-                    // O has won
-                    print("o")
+               
+                    label.text = "O Won!"
                 }
+                
+                playAgainButton.isHidden = false
+                
+                label.isHidden = false 
             }
         }
         
+        // check to see if player can still put a X or O
+        activeGame = false
+        for i in stateOfGame {
+            
+            if (i == 0) {
+                
+                activeGame = true
+                break
+            }
+
+        }
+        
+        // if it is a draw
+        
+        if (activeGame == false) {
+            
+            label.text = "DRAW!"
+            label.isHidden = false
+            playAgainButton.isHidden = false
+            
+        }
+    
     }
+    
+    
+    @IBOutlet weak var playAgainButton: UIButton!
+    
+    @IBAction func playAgain(_ sender: Any) {
+        
+        // Resetting the game once there is winner 
+        
+        stateOfGame = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        activeGame = true
+        currentPlayer = 1
+        
+        playAgainButton.isHidden = true
+        label.isHidden = true
+        
+        
+        // Reset all the button images for new game 
+        for i in 1...9 {
+            let button = view.viewWithTag(i) as! UIButton
+            button.setImage(nil, for: UIControlState())
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
