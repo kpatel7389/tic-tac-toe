@@ -9,6 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var playerActive = 1 // player 1 is always X
+    
+    var stateOfGame = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
+    
+    
+    @IBAction func action(_ sender: Any) {
+        
+        if(stateOfGame[(sender as AnyObject).tag-1] == 0) {
+            
+            if(playerActive == 1) {
+                
+                (sender as AnyObject).setImage(UIImage(named: "X.png"), for: UIControlState())
+                
+                playerActive = 2
+                
+            } else {
+                
+                (sender as AnyObject).setImage(UIImage(named: "O.png"), for: UIControlState())
+                
+                playerActive = 1
+        
+            }
+        
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
