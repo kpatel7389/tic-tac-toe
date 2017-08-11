@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var playerActive = 1 // player 1 is always X
+    var currentPlayer = 1 // player 1 is always X
     
     var stateOfGame = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
@@ -20,17 +20,19 @@ class ViewController: UIViewController {
         
         if(stateOfGame[(sender as AnyObject).tag-1] == 0) {
             
-            if(playerActive == 1) {
+            stateOfGame[(sender as AnyObject).tag-1] = currentPlayer // fixes player overriding the state of game
+            
+            if(currentPlayer == 1) {
                 
                 (sender as AnyObject).setImage(UIImage(named: "X.png"), for: UIControlState())
                 
-                playerActive = 2
+                currentPlayer = 2
                 
             } else {
                 
                 (sender as AnyObject).setImage(UIImage(named: "O.png"), for: UIControlState())
                 
-                playerActive = 1
+                currentPlayer = 1
         
             }
         
