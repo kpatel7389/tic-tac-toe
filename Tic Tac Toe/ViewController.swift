@@ -14,11 +14,16 @@ class ViewController: UIViewController {
     
     var stateOfGame = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
+    let winningPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    var activeGame = true
+    
     
     
     @IBAction func action(_ sender: Any) {
         
-        if(stateOfGame[(sender as AnyObject).tag-1] == 0) {
+        // continues the game if if there is no winner
+        
+        if(stateOfGame[(sender as AnyObject).tag-1] == 0 && activeGame == true) {
             
             stateOfGame[(sender as AnyObject).tag-1] = currentPlayer // fixes player overriding the state of game
             
@@ -36,6 +41,21 @@ class ViewController: UIViewController {
         
             }
         
+        }
+        
+        for pattern in winningPatterns {
+            if stateOfGame[pattern[0]] != 0 && stateOfGame[pattern[0]] == stateOfGame[pattern[1]] && stateOfGame[pattern[1]] == stateOfGame[pattern[2]] {
+                
+                activeGame = false; // stop the game if winner is present
+                
+                if stateOfGame[pattern[0]] == 1 {
+                    // X has won
+                    print("cross")
+                } else {
+                    // O has won
+                    print("o")
+                }
+            }
         }
         
     }
